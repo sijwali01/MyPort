@@ -10,7 +10,7 @@ const Body = () => {
             <img
               className="object-cover object-center rounded shadow-2xl"
               alt="hero"
-              src="src\assets\IMG_20220113_113748_778-removebg.png"
+              src="https://media.licdn.com/dms/image/D4D12AQHZ4n9TunXXqQ/article-cover_image-shrink_720_1280/0/1673598310961?e=2147483647&v=beta&t=Zvay8rRuGCOPO6Fuf7S0o3CMLLVrEDI-UiKf0HS2Waw"
             />
           </div>
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
