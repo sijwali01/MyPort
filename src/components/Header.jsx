@@ -1,65 +1,103 @@
 import React from "react";
-import { FaFilePdf, FaGithub, FaHome } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa6";
-import { RiContactsBook3Line } from "react-icons/ri";
-import { SiExpertsexchange } from "react-icons/si";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div>
-      <header className="text-gray-600 body-font bg-blue-300">
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <span className="ml-3 text-xl">My Portfolio</span>
+      <nav className="bg-white border-gray-200 dark:bg-gray-900">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a
+            href=""
+            className="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              className="h-8"
+              alt="Flowbite Logo"
+            />
+            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              PORTFOLIO
+            </span>
           </a>
-          <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <FaHome />
-            <Link to="/" className="mr-8 hover:text-black">
-              Home
-            </Link>
-
-            <SiExpertsexchange />
-            <Link to="/experience" className="mr-8 hover:text-black">
-              Experience
-            </Link>
-            <RiContactsBook3Line />
-            <Link to="/contact" className="mr-8 hover:text-black">
-              Contact
-            </Link>
-
-            <FaFilePdf />
-            <a
-              href="https://drive.google.com/file/d/1ro9ourXXM8Y2M9h4_Au9o7HR7A193fQG/view"
-              className="mr-8 hover:text-black"
-              target="_blank"
-              rel="noreferrer"
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span className="sr-only">Open main menu</span>
+            <svg
+              className="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
             >
-              Resume
-            </a>
-
-            <FaLinkedin />
-            <a
-              href="https://www.linkedin.com/in/manish-sijwali-23b361196"
-              className="mr-8 hover:text-black"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Linkedin
-            </a>
-
-            <FaGithub />
-            <a
-              href="https://github.com/sijwali01"
-              className="mr-8 hover:text-black"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Github
-            </a>
-          </nav>
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <Link
+                  to="/"
+                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                  aria-current="page"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://drive.google.com/file/d/1ro9ourXXM8Y2M9h4_Au9o7HR7A193fQG/view"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  Resume
+                </a>
+              </li>
+              <li>
+                <Link
+                  to="/experience"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  Experience
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/manish-sijwali-23b361196"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  Linkdin
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/sijwali01"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  Github
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </header>
+      </nav>
     </div>
   );
 };
